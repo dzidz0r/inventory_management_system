@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.senadzidzor.VendorControllerManagement"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <VBox alignment="CENTER" spacing="10">
+        <Label text="Vendor Management" />
+        <TableView fx:id="vendorTable" prefWidth="400" prefHeight="300">
+            <columns>
+                <TableColumn fx:id="columnId" text="ID" />
+                <TableColumn fx:id="columnName" text="Name" />
+                <TableColumn fx:id="columnPhone" text="Phone" />
+                <TableColumn fx:id="columnLocation" text="Location" />
+            </columns>
+        </TableView>
+        <HBox spacing="10">
+            <Label text="ID:" />
+            <TextField fx:id="idTextField" />
+            <Label text="Name:" />
+            <TextField fx:id="nameTextField" />
+            <Label text="Phone:" />
+            <TextField fx:id="phoneTextField" />
+            <Label text="Location:" />
+            <TextField fx:id="locationTextField" />
+            <Button text="Update" />
+        </HBox>
+        <Button text="Add Vendor" onAction="#handleAddVendor" />
+        <Button text="Remove Vendor" onAction="#handleRemoveVendor" />
+    </VBox>
+
+</AnchorPane>

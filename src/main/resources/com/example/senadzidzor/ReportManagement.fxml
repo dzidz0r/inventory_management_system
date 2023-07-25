@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.senadzidzor.ReportManagement"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <VBox alignment="CENTER" spacing="10">
+        <Label text="Report Management" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+        <Button text="Generate Goods Report" style="-fx-font-size: 14px;" />
+        <Button text="Generate Vendors Report" style="-fx-font-size: 14px;" />
+        <Button text="Generate Bills Report" style="-fx-font-size: 14px;" />
+    </VBox>
+
+</AnchorPane>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.senadzidzor.GoodsControllerManagement">
+
+    <VBox alignment="CENTER" prefHeight="401.0" prefWidth="414.0" spacing="10">
+        <Label maxWidth="-Infinity" text="Goods Management" />
+        <TableView fx:id="goodsTable" prefHeight="300" prefWidth="509.0">
+            <columns>
+                <TableColumn fx:id="columnName" text="Name" />
+                <TableColumn fx:id="columnCategory" text="Category" />
+                <TableColumn fx:id="columnQuantity" text="Quantity" />
+                <TableColumn fx:id="columnPrice" prefWidth="100.0" text="Price" />
+            </columns>
+            <VBox.margin>
+                <Insets left="80.0" />
+            </VBox.margin>
+
+
+        </TableView>
+        <GridPane alignment="CENTER" hgap="10" vgap="10">
+            <Label text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <TextField fx:id="nameTextField" promptText="Enter name" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+            <Label text="Category:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <ChoiceBox fx:id="categoryChoiceBox" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Beverages" />
+                        <String fx:value="Bread/Bakery" />
+                        <String fx:value="Canned/Jarred Goods" />
+                        <String fx:value="Dairy Products" />
+                        <String fx:value="Dry/Baking Goods" />
+                        <String fx:value="Frozen Products" />
+                        <String fx:value="Meat" />
+                        <String fx:value="Farm Produce" />
+                        <String fx:value="Home Cleaners" />
+                        <String fx:value="Paper Goods" />
+                        <String fx:value="Home Care" />
+                    </FXCollections>
+                </items>
+            </ChoiceBox>
+
+            <Label text="Quantity:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <TextField fx:id="quantityTextField" promptText="Enter quantity" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+            <Label text="Price:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+            <TextField fx:id="priceTextField" promptText="Enter price" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+            <Button onAction="#handleAddGoods" text="Add Goods" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+            <Button onAction="#handleRemoveGoods" text="Remove Goods" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+        </GridPane>
+
+    </VBox>
+
+</AnchorPane>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.senadzidzor.BillManagement">
+
+    <VBox alignment="CENTER" spacing="10">
+        <Label text="Bill Management" />
+        <TableView fx:id="billTable" prefHeight="300" prefWidth="400">
+            <columns>
+                <TableColumn fx:id="columnBillID" text="Bill ID" />
+                <TableColumn fx:id="columnDate" text="Date" />
+                <TableColumn fx:id="columnTotalAmount" prefWidth="112.0" text="Total Amount" />
+            </columns>
+        </TableView>
+        <Button text="Create Bill" onAction="#handleCreateBill" />
+        <Button text="Remove Bill" onAction="#handleRemoveBill" />
+    </VBox>
+
+</AnchorPane>
